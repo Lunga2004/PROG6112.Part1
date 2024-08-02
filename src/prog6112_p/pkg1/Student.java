@@ -115,7 +115,6 @@ public class Student {
         System.out.println();
         System.out.println("Students were captured and stored.");
         System.out.println();
-        exit();
     }
 
     /**
@@ -148,7 +147,6 @@ public class Student {
             System.out.println("Error: " + id +" Student not found.");
             System.out.println("----------------------------------");
         }
-        exit();
     }
 
     /**
@@ -176,15 +174,15 @@ public class Student {
                     System.out.println();
                     break;
                 } else {
-                    exit();
+                    
                 }
             }
         }
 
         if (!found) {
-            System.out.println("Error: "+ id +" Student not found.");
+            System.out.println( id +" Student not found.");
         }
-        exit();
+        
     }
 
     /**
@@ -206,7 +204,7 @@ public class Student {
         } else {
             System.out.println("No students were added.");
         }
-        exit();
+        
     }
 
     /**
@@ -225,15 +223,6 @@ public class Student {
     /**
      * This method exits the current menu.
      */
-    public void exit() {
-        System.out.println("Enter (1) Launch Menu Or Any Key To Exit.");
-        String launcher = keyboard.next();
-        if (launcher.contains("1")) {
-
-        } else {
-            System.out.println("You have exited the STUDENT MANAGEMENT APPLICATION.");
-            System.exit(0);
-        }
-    }
+  
 
 }
