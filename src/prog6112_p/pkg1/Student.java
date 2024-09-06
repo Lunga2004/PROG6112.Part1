@@ -89,7 +89,7 @@ public class Student {
                     if (age < 16) {
                         System.out.println("Age should be over 15 years old. Please try again.");
                         continue;
-                    }
+                        }
                     break;
                 } catch (InputMismatchException e) {
                     System.out.println("You have entered a invalid age.");
@@ -163,7 +163,9 @@ public class Student {
         for (int i = 0; i < students.get(0).size(); i++) {
             
             if (students.get(0).get(i).equals(id)) {
-                if (input.contains("y")) {
+                
+                while (input.contains("y")) {
+                    found = true;
 
                     students.get(0).remove(i);
                     students.get(1).remove(i);
@@ -173,15 +175,17 @@ public class Student {
                     System.out.println("Student "+ id +" WAS DELETED!!.");
                     System.out.println();
                     break;
-                } else {
-                    
                 }
             }
-        }
-
-        if (!found) {
+            
+            
+            
+        }if (!found) {
             System.out.println( id +" Student not found.");
+
+        
         }
+        
         
     }
 
@@ -211,14 +215,7 @@ public class Student {
      * This method exits the student management system.
      */
     public void exitStudentApplication() {
-        System.out.println("Enter (1) Launch Menu Or Any Key To Exit.");
-        String launcher = keyboard.next();
-        if (launcher.contains("1")) {
-            new Student();
-        } else {
-            System.out.println("You have exited the STUDENT MANAGEMENT APPLICATION.");
-            System.exit(0);
-        }
+        System.exit(0);
     }
     /**
      * This method exits the current menu.
